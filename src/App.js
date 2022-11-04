@@ -1,9 +1,10 @@
 
 import './App.css';
 import Footer from './components/Footer';
-import Hero from './components/Hero';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar';
+
 
 
 
@@ -12,8 +13,9 @@ function App() {
     <div className="App">
       
         <NavBar/>
-        <Hero/>
-        <ItemListContainer/>
+
+        {/* <ItemListContainer/> */}
+        <ItemDetailContainer/>
         <Footer/>
     </div>
   );

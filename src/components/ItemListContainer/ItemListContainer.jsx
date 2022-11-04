@@ -1,11 +1,26 @@
-import Item from "../Item/Item"
+import React,{useState, useEffect} from "react"
+import FlexWrapper from "../FlexWrapper/FlexWrapper"
+import getItemFromAPI from "../../mockService/mockService"
+import ItemList from "./ItemList"
 
 function ItemListContainer (props)
 {
+    const [productsList,setProductsList] = useState([]);
+    
+    useEffect(
+        ()=>{getItemFromAPI().then( (itemsDB)=>{
+            setProductsList(itemsDB);
+        });
+    }, []);
+
+    
     return(
-        <>
-            <Item greeting="Hola, gracias por utilizar esta aplicacion!"/>
-        </>
+        <div>
+            <FlexWrapper>
+
+            <ItemList productsList={productsList}/>
+            </FlexWrapper>
+        </div>
 
     )
 }

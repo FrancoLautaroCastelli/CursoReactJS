@@ -1,11 +1,13 @@
+import React from "react";
+import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import ItemCount from '../ItemCount';
-function Item (props) 
-{
-    return(
-        <>
-            <div className="card w-64 bg-base-100 shadow-xl ml-6 mb-1">
+
+function ItemDetail(props) {
+  return (
+    <FlexWrapper>
+       <div className="card w-64 bg-base-100 shadow-xl ml-6 mb-1">
                 <figure className="px-10 pt-10">
-                    <img src={props.imagen} alt="Shoes" className="rounded-xl" />
+                    <img src={props.imagen} alt="Tshirt" className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{props.title}</h2>
@@ -17,7 +19,8 @@ function Item (props)
                     </div>
                 </div>
             </div>
-        </>
-    )
+    </FlexWrapper>
+  );
 }
-export default Item
+
+export default ItemDetail;
