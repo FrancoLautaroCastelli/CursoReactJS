@@ -9,9 +9,9 @@ function NavBar ()
         </div>
         <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li><Link to="/item/Champions">Champions League</Link></li>
-          <li><Link to="/item/Europa">Europa League</Link></li>
-          <li><Link to="/item/Conference">Conference League</Link></li>
+          <li><Link to="/category/Champions">Champions League</Link></li>
+          <li><Link to="/category/Europa">Europa League</Link></li>
+          <li><Link to="/category/Conference">Conference League</Link></li>
         </ul>
       </div>
         <div className="navbar-start">

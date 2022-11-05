@@ -17,7 +17,7 @@ function ItemCount({stock}){
     }
 
     function agregarAlCarrito() {
-        console.log("Agregado al Carrito");
+        alert("Agregado al Carrito");
     }
     return (
        <>
