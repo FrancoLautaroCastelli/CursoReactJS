@@ -2,20 +2,25 @@ import React,{useState, useEffect} from "react"
 import FlexWrapper from "../FlexWrapper/FlexWrapper"
 import {getSingleItemFromAPI} from "../../mockService/mockService"
 import ItemDetail from "./ItemDetail";
+import {useParams} from "react-router-dom";
 
 function ItemDetailContainer (props)
 {
     const [product,setProduct] = useState([]);
+
     
-    // useEffect(
-    //     ()=>{getSingleItemFromAPI().then( (itemsDB)=>{
-    //         setProduct(itemsDB);
-    //     });
-    // }, []);
+    let params = useParams();
+    let id= params.id;
+    
+   
     useEffect (()=> {
-        getSingleItemFromAPI()
-        .then(itemsDB=> setProduct(itemsDB) )}, [])
-        console.log(product)
+        getSingleItemFromAPI(id)
+        .then((itemsDB) =>{
+             setProduct(itemsDB);
+            })
+    .catch((error) => alert (error));
+    }, []);
+       
     return(
         <div>
             <FlexWrapper>

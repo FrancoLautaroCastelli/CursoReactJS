@@ -4,7 +4,7 @@ const itemsDB = [
     "title": "Messi",
     "precio": "15000",
     "stock": "10",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del PSG",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50489671.png?v=23"
   }, {
@@ -12,7 +12,7 @@ const itemsDB = [
     "title": "Ronaldo",
     "precio": "12000",
     "stock": "7",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador del Manchester united",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50352449.png?v=23"
   } , {
@@ -20,7 +20,7 @@ const itemsDB = [
     "title": "Mbappe",
     "precio": "1000",
     "stock": "7",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del PSG",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50563395.png?v=23"
   }, {
@@ -28,7 +28,7 @@ const itemsDB = [
     "title": "Lewandowski",
     "precio": "15000",
     "stock": "10",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador del Barcelona",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50520193.png?v=23"
   }, {
@@ -36,7 +36,7 @@ const itemsDB = [
     "title": "Neymar",
     "precio": "11000",
     "stock": "11",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del PSG",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50522519.png?v=23"
   }, {
@@ -44,7 +44,7 @@ const itemsDB = [
     "title": "Martinez",
     "precio": "5000",
     "stock": "9",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del Inter",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50563126.png?v=23"
   }, {
@@ -52,7 +52,7 @@ const itemsDB = [
     "title": "Di Maria",
     "precio": "11000",
     "stock": "11",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador de Juventus",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50515546.png?v=23"
   }, {
@@ -60,7 +60,7 @@ const itemsDB = [
     "title": "Perisic",
     "precio": "2000",
     "stock": "3",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del Tottenham",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50513106.png?v=23"
   }, {
@@ -68,7 +68,7 @@ const itemsDB = [
     "title": "Valverde",
     "precio": "5000",
     "stock": "9",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del Real Madrid",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p84125133.png?v=23"
   }, {
@@ -76,7 +76,7 @@ const itemsDB = [
     "title": "Salah",
     "precio": "10000",
     "stock": "10",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del Liverpool",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p84095411.png?v=23"
   }, {
@@ -84,7 +84,7 @@ const itemsDB = [
     "title": "Falcao",
     "precio": "1000",
     "stock": "5",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del Rayo",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50499045.png?v=23"
   }, {
@@ -92,7 +92,7 @@ const itemsDB = [
     "title": "Son",
     "precio": "11000",
     "stock": "11",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del Tottemham",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50531752.png?v=23"
   }, {
@@ -100,7 +100,7 @@ const itemsDB = [
     "title": "Fekir",
     "precio": "6000",
     "stock": "2",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del PSG",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50548242.png?v=23"
   }, {
@@ -108,7 +108,7 @@ const itemsDB = [
     "title": "Haaland",
     "precio": "17000",
     "stock": "19",
-    "categoria": "Champions League",
+    "categoria": "Champions",
     "descripcion": "Actual jugador del Manchester City",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50570733.png?v=23"
   }, {
@@ -116,7 +116,7 @@ const itemsDB = [
     "title": "Muller",
     "precio": "2000",
     "stock": "2",
-    "categoria": "Conference League",
+    "categoria": "Conference",
     "descripcion": "Actual jugador del Bayern Munich",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50521244.png?v=23"
   }, {
@@ -124,7 +124,7 @@ const itemsDB = [
     "title": "Havertz",
     "precio": "1000",
     "stock": "4",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador del Chelsea",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p84121870.png?v=23"
   }, {
@@ -132,7 +132,7 @@ const itemsDB = [
     "title": "Benzema",
     "precio": "15000",
     "stock": "10",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador del Real Madrid",
     "imagen": "https://cdn.futbin.com/content/fifa22/img/players/p218268961.png?v=23"
   }, {
@@ -140,7 +140,7 @@ const itemsDB = [
     "title": "Phillips",
     "precio": "1200",
     "stock": "3",
-    "categoria": "Europa League",
+    "categoria": "Europa",
     "descripcion": "Actual jugador del Manchester City",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50555729.png?v=23"
   }
@@ -153,10 +153,30 @@ export default function getItemFromAPI(){
     });
 }
 
-export  function getSingleItemFromAPI(){
+export  function getSingleItemFromAPI(idParams){
+  return new Promise ((resolve,reject) => {
+      setTimeout(()=>{
+        let itemsRequested = itemsDB.find( (item)=> {
+          
+          return item.id ===Number(idParams) 
+        });
+                
+        if (itemsRequested) {
+          resolve(itemsRequested);
+        }else {
+          reject(new Error ("El item no existe en el sistema."))
+        }
+      },1000);
+  });
+}
+
+export  function getItemFromAPIByCategory(categoryid){
   return new Promise ((resolve) => {
       setTimeout(()=>{
-          resolve(itemsDB[1]);
+        let itemsRequested = itemsDB.filter( (item) => {
+          return item.categoria === categoryid
+        });
+          resolve(itemsRequested);
       },1000);
   });
 }

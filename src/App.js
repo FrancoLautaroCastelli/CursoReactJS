@@ -1,4 +1,4 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -7,16 +7,18 @@ import NavBar from './components/NavBar';
 
 
 
-
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App">     
+      <BrowserRouter>
         <NavBar/>
-
-        {/* <ItemListContainer/> */}
-        <ItemDetailContainer/>
+        <Routes>
+          <Route path="/" element={ <ItemListContainer/> } />
+          <Route path="/category/:categoryid" element= { <ItemListContainer/> } />
+          <Route path="/item/:id" element= { <ItemDetailContainer/> } />
+        </Routes>
         <Footer/>
+        </BrowserRouter>
     </div>
   );
 }

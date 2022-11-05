@@ -7,13 +7,15 @@ function ItemList(props) {
     <FlexWrapper>
       {props.productsList.map((products) => (
         <Item
-        key={products.id}
-        title={products.title}
-        precio={products.precio}
-        stock={products.stock}
-        categoria={products.categoria}
-        descripcion={products.descripcion}
-        imagen={products.imagen}
+          key={products.id}
+          products={products}
+          // id={products.id}
+          // title={products.title}
+          // precio={products.precio}
+          // stock={products.stock}
+          // categoria={products.categoria}
+          // descripcion={products.descripcion}
+          // imagen={products.imagen}
 
     />
       ))}
