@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react"
 import FlexWrapper from "../FlexWrapper/FlexWrapper"
-import {getSingleItemFromAPI} from "../../mockService/mockService"
+import {getSingleItemFromAPI} from "../../services/firebase"
 import ItemDetail from "./ItemDetail";
 import {useParams} from "react-router-dom";
 

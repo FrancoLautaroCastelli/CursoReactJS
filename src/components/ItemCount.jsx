@@ -1,8 +1,8 @@
 import React, { useState } from "react"
+import Button from "../components/Button/Button"
 
 
-
-function ItemCount({stock}){
+function ItemCount({stock, onAddToCart}){
     const [ cantidad , setCantidad] = useState(1);
     function Incremetar () {
         if (cantidad < stock){
@@ -16,22 +16,22 @@ function ItemCount({stock}){
         }
     }
 
-    function agregarAlCarrito() {
-        alert("Agregado al Carrito");
-    }
+    // function agregarAlCarrito() {
+    //     alert("Agregado al Carrito");
+    // }
     return (
        <>
             <div className="menu menu-horizontal p-0">
                 <br />
-                <button className="btn btn-xs mx-2.5" onClick={Decrementar} >-</button>
+                <Button className="btn btn-xs mx-2.5" onClick={Decrementar} >-</Button>
                 <br />
                 <strong>{cantidad}</strong>
                 <br />
-                <button className="btn btn-xs mx-2.5" onClick={Incremetar} >+</button>
+                <Button className="btn btn-xs mx-2.5" onClick={Incremetar} >+</Button>
                 <br />
 
             </div>
-                <button className="btn btn-success" onClick={agregarAlCarrito} >Agregar al carrito</button>
+                <Button className="btn btn-success" onClick={onAddToCart} >Agregar al carrito</Button>
         </>
     )
 }

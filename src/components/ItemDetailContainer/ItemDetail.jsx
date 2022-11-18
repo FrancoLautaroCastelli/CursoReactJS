@@ -1,8 +1,20 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import ItemCount from '../ItemCount';
+import cartContext from "../../storage/CartContext";
 
 function ItemDetail(props) {
+  const [isInCart,setIsInCart] = useState(false);
+  const {addToCart} = useContext(cartContext);
+  
+  function onAddToCart(count) {
+    const itemForCart = {
+      ...props.product,
+      count,
+    };
+    addToCart(itemForCart);
+    setIsInCart(true);
+  }
   return (
     <FlexWrapper>
             <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -14,7 +26,11 @@ function ItemDetail(props) {
                 
                 <p>Precio del producto: ${props.product.precio}</p>
                 <div className="card-actions justify-end">
-                <ItemCount   stock={props.product.stock} />
+                {!isInCart ? (
+                  <ItemCount onAddToCart={onAddToCart}  stock={props.product.stock} />
+                  ): (
+                    <button className="btn btn-xs mx-2.5"> Ir al Carrito</button>
+                  )}
                 </div>
               </div>
             </div>
