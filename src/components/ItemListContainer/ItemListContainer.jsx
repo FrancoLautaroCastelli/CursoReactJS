@@ -3,6 +3,9 @@ import FlexWrapper from "../FlexWrapper/FlexWrapper"
 import { getItemFromAPI, getItemFromAPIByCategory} from "../../services/firebase"
 import ItemList from "./ItemList"
 import {useParams} from "react-router-dom";
+
+
+
 function ItemListContainer (props)
 {
     const [productsList,setProductsList] = useState([]);

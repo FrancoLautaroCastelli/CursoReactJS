@@ -5,6 +5,7 @@ const itemsDB = [
     "precio": "15000",
     "stock": "10",
     "categoria": "Champions",
+    "discount" :"40",
     "descripcion": "Actual jugador del PSG",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50489671.png?v=23"
   }, {
@@ -69,6 +70,7 @@ const itemsDB = [
     "precio": "5000",
     "stock": "9",
     "categoria": "Champions",
+    "discount" :"10",
     "descripcion": "Actual jugador del Real Madrid",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p84125133.png?v=23"
   }, {
@@ -93,6 +95,7 @@ const itemsDB = [
     "precio": "11000",
     "stock": "11",
     "categoria": "Conference",
+    "discount" :"50",
     "descripcion": "Actual jugador del Tottemham",
     "imagen": "https://cdn.futbin.com/content/fifa23/img/players/p50531752.png?v=23"
   }, {

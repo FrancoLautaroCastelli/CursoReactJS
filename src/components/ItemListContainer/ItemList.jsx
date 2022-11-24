@@ -1,26 +1,24 @@
 import React from "react";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import Item from "../Item/Item";
+import Loader from "../Loader/Loader";
 
 function ItemList(props) {
+let emptyArray = props.productsList.length === 0;
+
+
   return (
     <FlexWrapper>
-      {props.productsList.map((products) => (
-        <Item
-          key={products.id}
-          products={products}
-          // id={products.id}
-          // title={products.title}
-          // precio={products.precio}
-          // stock={products.stock}
-          // categoria={products.categoria}
-          // descripcion={products.descripcion}
-          // imagen={products.imagen}
-
-    />
-      ))}
+      {emptyArray ? ( <div className="flex"> <Loader color="black"/></div>  ) 
+      : 
+      (props.productsList.map((products) => (
+        <Item key={products.id}  products={products} />)
+    
+      ))
+      }
     </FlexWrapper>
   );
 }
 
 export default ItemList;
+

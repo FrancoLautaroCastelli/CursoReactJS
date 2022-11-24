@@ -5,7 +5,8 @@ const cartContext = createContext();
 export function CartContextProvider (props) {
     const [cart, setCart] = useState([]);
 
-    function AddToCart (itemData){
+    function addToCart (itemData){
+       
         let itemFound = cart.find (itemInCart => itemInCart.id === itemData.id)
         if(itemFound){
             let newCart = cart.map(itemInCart=>{
@@ -23,10 +24,7 @@ export function CartContextProvider (props) {
             // const newCart = [...cart];
             // newCart.push(itemData);
             // setCart(newCart);
-            setCart((newCart)=>{
-                newCart.push(itemData)
-                return newCart;
-            })
+            setCart([...cart,itemData])
         }
         
     }
@@ -38,18 +36,29 @@ export function CartContextProvider (props) {
         })
         return total;
     }
+    function totalPriceInCart (){
+        
+    }
 
+    function removeItem (itemId){
+        console.log("Removiendo el item", itemId)
+    }
     
+    function clear (){
+        
+    }
 
     const value = {   
         totalItemsInCart :totalItemsInCart, 
-        AddToCart :AddToCart };
+        addToCart :addToCart ,
+        removeItem : removeItem ,
+        clear: clear ,
+        totalPriceInCart: totalPriceInCart};
     return ( 
-        <cartContext.Provider value={{ AddToCart, totalItemsInCart }}>
+        <cartContext.Provider value={value}>
           <>{props.children}</>
         </cartContext.Provider>
     )
 }
-
 
 export default cartContext;

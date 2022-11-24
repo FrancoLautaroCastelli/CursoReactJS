@@ -14,6 +14,9 @@ function Item ({products})
                     <h2 className="card-title">{products.title}</h2>
                     <ItemCount   stock={products.stock} />
                     <p>{products.descripcion}</p>
+                    {
+                        products.discount? <h4 className="text-green-500">Descuento: {products.discount}%</h4> : <></>
+                    }
                     <p>${products.precio}</p>
                     <div className="card-actions">
                         <Link to={urlDetail}>

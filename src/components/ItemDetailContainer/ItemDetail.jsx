@@ -2,12 +2,14 @@ import React, {useState, useContext} from "react";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import ItemCount from '../ItemCount';
 import cartContext from "../../storage/CartContext";
+import { Link } from "react-router-dom";
 
 function ItemDetail(props) {
   const [isInCart,setIsInCart] = useState(false);
   const {addToCart} = useContext(cartContext);
   
   function onAddToCart(count) {
+    
     const itemForCart = {
       ...props.product,
       count,
@@ -29,7 +31,9 @@ function ItemDetail(props) {
                 {!isInCart ? (
                   <ItemCount onAddToCart={onAddToCart}  stock={props.product.stock} />
                   ): (
-                    <button className="btn btn-xs mx-2.5"> Ir al Carrito</button>
+                    <Link to="/cart">
+                      <button className="btn btn-xs mx-2.5"> Ir al Carrito</button>
+                    </Link>
                   )}
                 </div>
               </div>
