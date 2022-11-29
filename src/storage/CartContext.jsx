@@ -37,15 +37,26 @@ export function CartContextProvider (props) {
         return total;
     }
     function totalPriceInCart (){
+        let totalPrice = 0;
+        cart.forEach((itemInCart)=>{
+            totalPrice = totalPrice + itemInCart.count * itemInCart.precio
+        });
+        return totalPrice;
         
     }
 
     function removeItem (itemId){
-        console.log("Removiendo el item", itemId)
+        let indexABorrar = cart.findIndex(data => data.id === itemId);
+        if (indexABorrar === -1) {
+            return;
+        }
+        const newCart = [...cart];
+        newCart.splice(indexABorrar, 1);
+        setCart(newCart);
     }
     
     function clear (){
-        
+        setCart([])
     }
 
     const value = {   
@@ -53,6 +64,7 @@ export function CartContextProvider (props) {
         addToCart :addToCart ,
         removeItem : removeItem ,
         clear: clear ,
+        cart,
         totalPriceInCart: totalPriceInCart};
     return ( 
         <cartContext.Provider value={value}>

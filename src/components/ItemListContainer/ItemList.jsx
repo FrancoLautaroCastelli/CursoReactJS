@@ -9,7 +9,9 @@ let emptyArray = props.productsList.length === 0;
 
   return (
     <FlexWrapper>
-      {emptyArray ? ( <div className="flex"> <Loader color="black"/></div>  ) 
+      {emptyArray ?  props.feedbackMsg ?  <span style={{ backgroundColor: "red" }}>{props.feedbackMsg}</span>
+          :
+        ( <div className="flex"> <Loader color="black"/></div>  ) 
       : 
       (props.productsList.map((products) => (
         <Item key={products.id}  products={products} />)

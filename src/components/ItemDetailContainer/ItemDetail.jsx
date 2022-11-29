@@ -6,15 +6,19 @@ import { Link } from "react-router-dom";
 
 function ItemDetail(props) {
   const [isInCart,setIsInCart] = useState(false);
-  const {addToCart} = useContext(cartContext);
+  const {cart, addToCart} = useContext(cartContext);
   
+  let itemInCart = cart.find(item => props.product.id === item.id)
+  let stock = props.product.stock;
+  if (itemInCart) stock -= itemInCart.count;
+
   function onAddToCart(count) {
     
     const itemForCart = {
       ...props.product,
       count,
     };
-    addToCart(itemForCart);
+    addToCart(itemForCart,count);
     setIsInCart(true);
   }
   return (
@@ -29,7 +33,7 @@ function ItemDetail(props) {
                 <p>Precio del producto: ${props.product.precio}</p>
                 <div className="card-actions justify-end">
                 {!isInCart ? (
-                  <ItemCount onAddToCart={onAddToCart}  stock={props.product.stock} />
+                  <ItemCount onAddToCart={onAddToCart}  stock={stock} />
                   ): (
                     <Link to="/cart">
                       <button className="btn btn-xs mx-2.5"> Ir al Carrito</button>

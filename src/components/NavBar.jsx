@@ -3,7 +3,7 @@ import {useContext} from "react";
 import cartContext from "../storage/CartContext";
 function NavBar ()
 {
-  const { totalItemsInCart } = useContext(cartContext);
+  const { totalItemsInCart,totalPriceInCart } = useContext(cartContext);
     return(
     <>
       <div className="navbar bg-base-100 mb-6">
@@ -31,7 +31,7 @@ function NavBar ()
             <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
               <div className="card-body">
                 <span className="font-bold text-lg">{(totalItemsInCart()) > 0 ? totalItemsInCart(): "Sin " } Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-info">Precio total: ${totalPriceInCart()}</span>
                   <Link to="/cart">
                     <div className="card-actions">
                         <button className="btn btn-primary btn-block">Ver carrito</button>

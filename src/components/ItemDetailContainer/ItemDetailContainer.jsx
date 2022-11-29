@@ -9,7 +9,7 @@ function ItemDetailContainer (props)
 {
     const [product,setProduct] = useState([]);
     const [isLoading,setIsLoading]= useState(true);
-
+    const [feedbackMsg,setFeedbackMsg]= useState(null);
     
     let params = useParams();
     let id= params.id;
@@ -19,9 +19,9 @@ function ItemDetailContainer (props)
         getSingleItemFromAPI(id)
         .then((itemsDB) =>{
              setProduct(itemsDB);
-             setIsLoading(false);
+             
             })
-    .catch((error) =>{ alert (error)})
+    .catch((error) =>{ setFeedbackMsg (`Error: ${error.message}`)})
     .finally ( ()=> setIsLoading(false))
     }, [id]);
        
@@ -29,12 +29,17 @@ function ItemDetailContainer (props)
     if (isLoading) return <div className="flex"> <Loader  color="black"/></div> 
     return(
         <div>
+            {feedbackMsg ? (
+                <span style={{ backgroundColor: "red" }}>{feedbackMsg}</span>
+            ) : (
             <FlexWrapper>
 
               <ItemDetail product={product}/>
-            </FlexWrapper>
-        </div>
 
+            </FlexWrapper>
+            )}
+        </div>
+            
     )
 }
 
